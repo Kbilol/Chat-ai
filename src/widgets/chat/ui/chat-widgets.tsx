@@ -6,13 +6,16 @@ import { ChatInput } from "../../../features/chat/ui/chat-input";
 import { MessageBubble } from "../../../entities/message/ui/message-bubble";
 import { useMessageStore } from "../../../entities/message/model/message-store";
 import { Loader2 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 export function ChatWidget() {
   const { messages, isLoading } = useMessageStore();
 
   return (
+    
     <Card className="w-full max-w-4xl h-[600px] flex flex-col shadow-xl">
       <ChatHeader />
+      <NavLink to="/" className="rounded-md">Back</NavLink>
       <CardContent className="flex-1 p-0 overflow-hidden">
         <ScrollArea className="h-full">
           <div className="flex flex-col">

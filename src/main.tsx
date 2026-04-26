@@ -21,6 +21,7 @@ let router = createBrowserRouter([
   {
     path:"/chat",
     Component:ChatPage,
+    
   },
   
 

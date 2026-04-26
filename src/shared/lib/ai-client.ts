@@ -39,6 +39,7 @@ class AIClient extends GoogleGenAI {
       contents: message,
     });
 
+    console.log(history);
 
     return {
       content: response.text || "Ops не могу ответить"

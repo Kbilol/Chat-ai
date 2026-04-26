@@ -1,5 +1,4 @@
-// src/features/chat/ui/chat-input.tsx
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 import { Button } from "../../../shared/ui/button";
 import { Input } from "../../../shared/ui/input";
 import { Send, Loader2 } from "lucide-react";
@@ -9,8 +8,7 @@ export function ChatInput() {
   const [input, setInput] = useState("");
   const { isLoading, sendMessage } = useMessageStore();
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     if (!input.trim() || isLoading) return;
 
     const message = input;
@@ -19,7 +17,13 @@ export function ChatInput() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border-t">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}
+      className="p-4 border-t"
+    >
       <div className="flex gap-2">
         <Input
           value={input}
@@ -30,7 +34,7 @@ export function ChatInput() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
-              handleSubmit(e);
+              handleSubmit();
             }
           }}
         />

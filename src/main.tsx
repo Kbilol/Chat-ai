@@ -9,8 +9,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import HomePage from "./Home page/Home.Page.tsx"
-import { ChatPage } from "./Chat page/Chat.Page.tsx"
+import HomePage from "./pages/Home.page";
+import { ChatPage } from "./pages/Chat.page";
+
+
 
 
 let router = createBrowserRouter([

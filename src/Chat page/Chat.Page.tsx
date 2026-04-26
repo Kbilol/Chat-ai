@@ -7,7 +7,7 @@ type Chat = {
   title: string;
 };
 
-export function ChatPage() {
+export function ChatPage () {
   const [chats, setChats] = useState<Chat[]>([
     { id: 1, title: "New Chat 1" },
     { id: 2, title: "New Chat 2" },
@@ -35,7 +35,7 @@ export function ChatPage() {
     <div className="flex h-screen bg-black text-white">
       
       {/* SIDEBAR */}
-      <aside className="w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col">
+      <aside className=" bg-zinc-900 border-r border-zinc-800 flex flex-col">
         
         {/* HEADER */}
         <div className="p-4 border-b border-zinc-800">

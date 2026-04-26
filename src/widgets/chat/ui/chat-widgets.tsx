@@ -13,8 +13,8 @@ export function ChatWidget() {
 
   return (
     
-    <Card className="w-full max-w-4xl h-[600px] flex flex-col shadow-xl">
-      <ChatHeader />
+    <Card className="w-full h-full flex flex-col">
+      <ChatHeader  />
       <NavLink to="/" className="rounded-md">Back</NavLink>
       <CardContent className="flex-1 p-0 overflow-hidden">
         <ScrollArea className="h-full">

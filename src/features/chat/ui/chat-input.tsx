@@ -1,5 +1,5 @@
 // src/features/chat/ui/chat-input.tsx
-import { useState, FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { Button } from "../../../shared/ui/button";
 import { Input } from "../../../shared/ui/input";
 import { Send, Loader2 } from "lucide-react";

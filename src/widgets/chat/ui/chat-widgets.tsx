@@ -18,6 +18,7 @@ export function ChatWidget() {
       <NavLink to="/" className="rounded-md">Back</NavLink>
       <CardContent className="flex-1 p-0 overflow-hidden">
         <ScrollArea className="h-full">
+          
           <div className="flex flex-col">
             {messages.map((message) => (
               <MessageBubble key={message.id} message={message} />

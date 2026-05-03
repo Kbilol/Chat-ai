@@ -32,7 +32,7 @@ class AIClient extends GoogleGenAI {
 
   async sendMessage(
     message: string,
-    history: ChatMessage[]
+    _history: ChatMessage[]
   ): Promise<SendMessageResponse> {
     const response = await this.models.generateContent({
       model: "gemini-3-flash-preview",
